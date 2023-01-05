@@ -11,4 +11,12 @@ public class OneRatingPlayerGame : Game
     {
         return 1;
     }
+
+
+    public OneRatingPlayerGame() : base() { }
+
+    public override int GetId()
+    {
+        return Id;
+    }
 }

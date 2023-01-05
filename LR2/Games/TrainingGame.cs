@@ -11,4 +11,11 @@ public class TrainingGame : Game
     {
         return 0;
     }
+
+    public TrainingGame() : base() { }
+
+    public override int GetId()
+    {
+        return Id;
+    }
 }

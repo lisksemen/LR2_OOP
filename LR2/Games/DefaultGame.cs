@@ -7,8 +7,17 @@ public class DefaultGame : Game
         return GameType.Default;
     }
 
+    
+
     public override int GetGameRating()
     {
         return 1;
+    }
+
+    public DefaultGame() : base() { }
+
+    public override int GetId()
+    {
+        return Id;
     }
 }
