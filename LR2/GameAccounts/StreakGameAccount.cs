@@ -22,13 +22,13 @@ public class StreakGameAccount : GameAccount
         else
             _currentRating += game.GetGameRating();
 
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, true));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Win));
     }
 
     public override void LoseGame(Game game)
     {
         GamesCount++;
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, false));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Lose));
         if (game.GetGameType().Equals("OneRatingPlayer"))
             return;
         _currentRating -= game.GetGameRating();
@@ -37,7 +37,7 @@ public class StreakGameAccount : GameAccount
     private bool IsWinStreak()
     {
         //Skipping all games except last STREAK_GAMES_COUNT 
-        return GamesHistory.Skip(GamesHistory.Count - StreakGamesCount).All(result => result.IsWin);
+        return GamesHistory.Skip(GamesHistory.Count - StreakGamesCount).All(result => result.IsWin == GameResult.GameResultType.Win);
     }
 
     public override void GetStats()

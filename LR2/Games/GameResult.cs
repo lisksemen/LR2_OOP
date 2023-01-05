@@ -2,15 +2,20 @@
 
 public class GameResult
 {
+    public enum GameResultType
+    {
+        Win,
+        Lose
+    }
     private readonly Game GameParams;
 
-    public GameResult(Game gameParams, bool isWin)
+    public GameResult(Game gameParams, GameResultType gameResultType)
     {
         GameParams = gameParams;
-        IsWin = isWin;
+        IsWin = gameResultType;
     }
 
-    public bool IsWin { get; }
+    public GameResultType IsWin { get; }
 
     public GameType GetGameType()
     {

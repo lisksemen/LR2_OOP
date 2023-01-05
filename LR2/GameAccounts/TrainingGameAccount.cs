@@ -14,13 +14,13 @@ public class TrainingGameAccount : GameAccount
     public override void WinGame(Game game)
     {
         GamesCount++;
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, true));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Win));
     }
 
     public override void LoseGame(Game game)
     {
         GamesCount++;
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, false));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Lose));
     }
 
     public override void GetStats()

@@ -18,13 +18,13 @@ public class DefaultGameAccount : GameAccount
     {
         GamesCount++;
         _currentRating += game.GetGameRating();
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, true));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Win));
     }
 
     public override void LoseGame(Game game)
     {
         GamesCount++;
-        GamesHistory.Add(DefaultFactory.CreateGameResult(game, false));
+        GamesHistory.Add(DefaultFactory.CreateGameResult(game, GameResult.GameResultType.Lose));
         if (game.GetGameType().Equals("OneRatingPlayer"))
             return;
         _currentRating -= game.GetGameRating();

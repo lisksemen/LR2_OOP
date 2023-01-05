@@ -16,7 +16,7 @@ public static class DefaultFactory
         };
     }
 
-    public static GameResult CreateGameResult(Game game, bool isWin)
+    public static GameResult CreateGameResult(Game game, GameResult.GameResultType isWin)
     {
         return new GameResult(game, isWin);
     }
