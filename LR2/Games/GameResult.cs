@@ -12,7 +12,7 @@ public class GameResult
 
     public bool IsWin { get; }
 
-    public string GetGameType()
+    public GameType GetGameType()
     {
         return GameParams.GetGameType();
     }

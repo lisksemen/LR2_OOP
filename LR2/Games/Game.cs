@@ -2,7 +2,7 @@
 
 public abstract class Game
 {
-    public abstract string GetGameType();
+    public abstract GameType GetGameType();
 
     public abstract int GetGameRating();
 

@@ -2,9 +2,9 @@
 
 public class DefaultGame : Game
 {
-    public override string GetGameType()
+    public override GameType GetGameType()
     {
-        return "Default";
+        return GameType.Default;
     }
 
     public override int GetGameRating()

@@ -2,9 +2,9 @@
 
 public class OneRatingPlayerGame : Game
 {
-    public override string GetGameType()
+    public override GameType GetGameType()
     {
-        return "OneRatingPlayer";
+        return GameType.OneRaiting;
     }
 
     public override int GetGameRating()

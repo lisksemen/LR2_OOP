@@ -2,9 +2,9 @@
 
 public class TrainingGame : Game
 {
-    public override string GetGameType()
+    public override GameType GetGameType()
     {
-        return "Training";
+        return GameType.Training;
     }
 
     public override int GetGameRating()
